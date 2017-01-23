@@ -3,3 +3,5 @@
 ################################################################################
 
 /SignalR/packages
+/SignalR/SignalR/obj/Debug
+/SignalR/SignalR/bin

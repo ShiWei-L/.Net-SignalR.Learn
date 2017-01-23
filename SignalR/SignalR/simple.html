@@ -1,11 +1,26 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script type="text/javascript">
+        let conn = $.connection("/myconnection");
+        conn.start(function () {
+            conn.send("你好啊");
+        });
+        //会出错
+        conn.send("你好啊");
+
+        conn.received(function (data) {
+            console.log("service :" + data);
+        });
+
+    </script>
 </head>
 <body>
-    dfdfdf
+
 </body>
 </html>

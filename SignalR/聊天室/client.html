@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.1.2.min.js"></script>
+
+    <script type="text/javascript">
+
+        let conn = $.connection("/connection");
+
+        conn.start();
+        let currentRoomId;
+        let userName;
+        function createRoom() {
+            let roomName = $("#roomName").val();
+            if (!$.trim(roomName)) {
+                alert("请输入聊天室名称");
+                return;
+            }
+            conn.send({ RoomName: roomName, Action: "createRoom", RoomId: "", Data: "", UserName: "" });
+        }
+
+        conn.received(function (data) {
+            let jsonData = $.parseJSON(data);
+            if (jsonData.ResultType === "msgResult") {
+                console.log(jsonData.Data);
+            } else {
+                $("#roomList").empty();
+                $("#roomList").append("<h2>聊天室列表</h2>");
+                jsonData.Data.forEach(function (value) {
+                    $("#roomList").append("<button class='btn btn-primary' onclick='jionUs(&quot;" + value.RoomId + "&quot;,&quot;" + value.RoomName + "&quot;)'>" + value.RoomName + "</button>");
+                });
+                if (jsonData.UserName) {
+                    userName = jsonData.UserName;
+                }
+            }
+
+            currentRoomId = jsonData.CurrentRoomId;
+
+        });
+
+        function jionUs(roomid, roomName) {
+            conn.send({ RoomName: roomName, RoomId: roomid, UserName: userName, Action: "jionUs", Data: "" });
+        }
+
+        function sendMsg() {
+            let msg = $("#msg").val();
+            if (!$.trim(msg)) {
+                alert("请输入消息内容");
+                return;
+            }
+            if (!currentRoomId) {
+                alert("请加入聊天室");
+                return;
+            }
+
+            conn.send({ RoomName: "", RoomId: currentRoomId, UserName: userName, Action: "", Data: msg });
+
+        }
+    </script>
+</head>
+<body>
+    <div class="form-group" id="roomList">
+
+    </div>
+    <hr />
+    <div class="form-group">
+        <h2>创建聊天室</h2>
+        <input type="text" placeholder="聊天室名称" class="form-control" id="roomName" />
+        <br />
+        <button class="btn btn-primary" onclick="createRoom()">创建</button>
+    </div>
+    <hr />
+    <div class="form-group">
+        <h2>发送消息</h2>
+        <input type="text" placeholder="消息内容" class="form-control" id="msg" />
+        <br />
+        <button class="btn btn-primary" onclick="sendMsg()">发送</button>
+    </div>
+</body>
+</html>
