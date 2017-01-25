@@ -6,18 +6,35 @@
     <meta charset="utf-8" />
     <script src="Scripts/jquery-1.10.2.min.js"></script>
     <script src="Scripts/jquery.signalR-2.1.2.min.js"></script>
-    <!-- ReSharper disable once Html.PathError -->
-    <script src="/simpleHub/js"></script>
+
+    <!--<script src="Scripts/hubDemo.js"></script>-->
+
     <script type="text/javascript">
-        let hubDemo = $.connection.hubDemo;
+        //let hubDemo = $.connection.hubDemo;
 
-        hubDemo.client.helloClient = function () {
+        //hubDemo.client.helloClient = function () {
 
+        //    console.log("收到服务器的问候");
+        //}
+
+        //$.connection.hub.start().done(function () {
+        //    hubDemo.server.helloService();
+        //});
+
+        let hubDemo = $.hubConnection("/simpleHub");
+
+        var proxy = hubDemo.createHubProxy("HubDemo");
+
+        hubDemo.start().done(function () {
+            proxy.invoke("HelloService");
+        });
+
+        proxy.on("helloClient", function () {
             console.log("收到服务器的问候");
-        }
+        });
 
-        $.connection.hub.start().done(function () {
-            hubDemo.server.helloService();
+        proxy.on("notice", function (data) {
+            console.log(data);
         });
     </script>
 </head>

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "聊天室", "聊天室\聊�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHub", "SimpleHub\SimpleHub.csproj", "{E3E8EF14-6B23-4B20-AD4D-3550066A7AAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSignalRClient", "ConsoleSignalRClient\ConsoleSignalRClient.csproj", "{4DDB432F-20DC-4BBB-B617-DF11154AFFDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSignalRServer", "ConsoleSignalRServer\ConsoleSignalRServer.csproj", "{C4B5156C-FD5C-45EF-9AD3-E99EC027FC91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E3E8EF14-6B23-4B20-AD4D-3550066A7AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3E8EF14-6B23-4B20-AD4D-3550066A7AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3E8EF14-6B23-4B20-AD4D-3550066A7AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDB432F-20DC-4BBB-B617-DF11154AFFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDB432F-20DC-4BBB-B617-DF11154AFFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDB432F-20DC-4BBB-B617-DF11154AFFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDB432F-20DC-4BBB-B617-DF11154AFFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B5156C-FD5C-45EF-9AD3-E99EC027FC91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B5156C-FD5C-45EF-9AD3-E99EC027FC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B5156C-FD5C-45EF-9AD3-E99EC027FC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B5156C-FD5C-45EF-9AD3-E99EC027FC91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
