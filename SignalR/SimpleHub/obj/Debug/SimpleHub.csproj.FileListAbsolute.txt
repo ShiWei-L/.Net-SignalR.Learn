@@ -13,6 +13,7 @@ J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\roslyn\VBCSCompil
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\SimpleHub.dll.config
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\SimpleHub.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\SimpleHub.pdb
+J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\AjaxMin.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\Microsoft.AspNet.SignalR.Core.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
@@ -34,6 +35,5 @@ J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\zh-Hans\Microsoft
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\zh-Hans\Microsoft.Owin.resources.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
-J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\obj\Debug\SimpleHub.csprojResolveAssemblyReference.cache
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\obj\Debug\SimpleHub.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\SimpleHub\obj\Debug\SimpleHub.pdb

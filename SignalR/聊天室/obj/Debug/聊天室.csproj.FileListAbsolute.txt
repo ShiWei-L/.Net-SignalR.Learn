@@ -34,6 +34,5 @@ J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\聊天室\bin\zh-Hans\Microsoft
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\聊天室\bin\zh-Hans\Microsoft.Owin.resources.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\聊天室\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\聊天室\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
-J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\聊天室\obj\Debug\聊天室.csprojResolveAssemblyReference.cache
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\聊天室\obj\Debug\聊天室.dll
 J:\Codes\其它学习\.Net-SignalR.Learn\SignalR\聊天室\obj\Debug\聊天室.pdb
